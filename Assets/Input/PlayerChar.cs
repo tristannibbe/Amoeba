@@ -25,6 +25,14 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""TogglePauseScreen"",
+                    ""type"": ""Button"",
+                    ""id"": ""84049b87-ad26-41cc-9d71-1a8267bb97df"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -82,6 +90,17 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f841b40-c908-44a3-89a2-0e599609c71b"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TogglePauseScreen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -103,6 +122,7 @@ public class @PlayerChar : IInputActionCollection, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        m_Player_TogglePauseScreen = m_Player.FindAction("TogglePauseScreen", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -153,11 +173,13 @@ public class @PlayerChar : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Movement;
+    private readonly InputAction m_Player_TogglePauseScreen;
     public struct PlayerActions
     {
         private @PlayerChar m_Wrapper;
         public PlayerActions(@PlayerChar wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
+        public InputAction @TogglePauseScreen => m_Wrapper.m_Player_TogglePauseScreen;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -170,6 +192,9 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                 @Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
+                @TogglePauseScreen.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
+                @TogglePauseScreen.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
+                @TogglePauseScreen.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -177,6 +202,9 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
+                @TogglePauseScreen.started += instance.OnTogglePauseScreen;
+                @TogglePauseScreen.performed += instance.OnTogglePauseScreen;
+                @TogglePauseScreen.canceled += instance.OnTogglePauseScreen;
             }
         }
     }
@@ -193,5 +221,6 @@ public class @PlayerChar : IInputActionCollection, IDisposable
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnTogglePauseScreen(InputAction.CallbackContext context);
     }
 }

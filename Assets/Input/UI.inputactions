@@ -1,1 +1,39 @@
-{}
+{
+    "name": "UI",
+    "maps": [
+        {
+            "name": "PauseScreen",
+            "id": "ff66fd77-3a02-4f29-a9ff-87ab8061e21b",
+            "actions": [
+                {
+                    "name": "ToggleScreen",
+                    "type": "Button",
+                    "id": "759971d1-433a-485d-bc99-5b5e5591792b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c10dd119-41b2-4b69-8668-e7d66c8a7444",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ToggleScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": []
+        }
+    ]
+}

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed;
+    public UIController uiController;
 
     private Rigidbody2D playerBody;
     private Collider2D playerCollider;
@@ -33,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void togglePauseScreen (InputAction.CallbackContext context){
+        uiController.togglePauseScreen(context);
+    }
 
 
     public void Move(InputAction.CallbackContext context)
