@@ -22,7 +22,6 @@ public class UIController : MonoBehaviour
 
     public void togglePauseScreen(InputAction.CallbackContext context)
     {
-        print("dsafdsaf");
         if (pauseScreen.activeInHierarchy)
         {
             closePauseScreen();

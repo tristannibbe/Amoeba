@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: ed839a24dc8b7cf4884e1541f3ef50c5
+guid: 2ae767626ee662842bc58064a90df237
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7509759252434131616
-    second: playertileset_0
+      213: -1986375405875123066
+    second: psuedopoid_0
   - first:
-      213: -7904312590684324404
-    second: playertileset_1
-  - first:
-      213: -1061776135946009628
-    second: playertileset_2
-  - first:
-      213: -5138108639496005005
-    second: playertileset_3
+      213: -8696756059735770788
+    second: psuedopoid_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,11 +109,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playertileset_0
+      name: psuedopoid_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 448
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -129,18 +123,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0aa1a0e6046083860800000000000000
-      internalID: 7509759252434131616
+      spriteID: 68cad36b71afe64e0800000000000000
+      internalID: -1986375405875123066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playertileset_1
+      name: psuedopoid_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 448
+        y: 0
         width: 64
         height: 64
       alignment: 0
@@ -150,50 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccdfc9ed39d3e4290800000000000000
-      internalID: -7904312590684324404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playertileset_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e383f9da30d341f0800000000000000
-      internalID: -1061776135946009628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playertileset_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 448
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37a997d4a65c1b8b0800000000000000
-      internalID: -5138108639496005005
+      spriteID: c593939e07aee4780800000000000000
+      internalID: -8696756059735770788
       vertices: []
       indices: 
       edges: []

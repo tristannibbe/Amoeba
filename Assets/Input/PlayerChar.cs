@@ -33,6 +33,14 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""1a817b6c-ec4a-42e7-878c-2ac927847e14"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -97,8 +105,19 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard"",
                     ""action"": ""TogglePauseScreen"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ca4f3cbb-c120-4408-be8e-2e366d6f21c5"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -123,6 +142,7 @@ public class @PlayerChar : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_TogglePauseScreen = m_Player.FindAction("TogglePauseScreen", throwIfNotFound: true);
+        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,12 +194,14 @@ public class @PlayerChar : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_TogglePauseScreen;
+    private readonly InputAction m_Player_Attack;
     public struct PlayerActions
     {
         private @PlayerChar m_Wrapper;
         public PlayerActions(@PlayerChar wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @TogglePauseScreen => m_Wrapper.m_Player_TogglePauseScreen;
+        public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -195,6 +217,9 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                 @TogglePauseScreen.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
                 @TogglePauseScreen.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
                 @TogglePauseScreen.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnTogglePauseScreen;
+                @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -205,6 +230,9 @@ public class @PlayerChar : IInputActionCollection, IDisposable
                 @TogglePauseScreen.started += instance.OnTogglePauseScreen;
                 @TogglePauseScreen.performed += instance.OnTogglePauseScreen;
                 @TogglePauseScreen.canceled += instance.OnTogglePauseScreen;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
             }
         }
     }
@@ -222,5 +250,6 @@ public class @PlayerChar : IInputActionCollection, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnTogglePauseScreen(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
 }
