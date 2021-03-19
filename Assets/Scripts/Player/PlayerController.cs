@@ -29,8 +29,11 @@ public class PlayerController : MonoBehaviour
 
     public void attack(InputAction.CallbackContext context)
     {
-        print("attacked");
-        playerAnimController.SetTrigger("attack");
+        if (!context.canceled)
+        {
+            print("attacked");
+            playerAnimController.SetTrigger("attack");
+        }
     }
 
 
