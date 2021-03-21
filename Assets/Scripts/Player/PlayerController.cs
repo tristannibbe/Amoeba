@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float health;
     public float damage;
 
-    private StatsSystem playerStats;
+    public StatsSystem playerStats;
     private Rigidbody2D playerBody;
     private Collider2D playerCollider;
     private Animator playerAnimController;
@@ -22,12 +22,20 @@ public class PlayerController : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         playerAnimController = GetComponent<Animator>();
-        playerStats = new StatsSystem();
+        playerStats = new StatsSystem(health,damage);
     }
 
 
     public void togglePauseScreen (InputAction.CallbackContext context){
         uiController.togglePauseScreen(context);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.SendMessage("ApplyDamage", 10);
+        }
     }
 
     public void attack(InputAction.CallbackContext context)

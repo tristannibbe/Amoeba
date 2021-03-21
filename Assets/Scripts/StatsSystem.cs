@@ -2,11 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatsSystem : MonoBehaviour
+public class StatsSystem
 {
     private float maxHealth;
     private float currHealth;
     private float damage;
+
+    public StatsSystem(float health,float damage)
+    {
+        setMaxHealth(health);
+        setHealth(health);
+        setDamage(damage);
+    }
 
     public float getDamage()
     {
