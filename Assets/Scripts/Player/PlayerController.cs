@@ -40,9 +40,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void takeDamage(float amount)
+    {
+        bool dead = playerStats.takeDamage(amount);
+
+        if (dead)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 
 
-        public void Move(InputAction.CallbackContext context)
+    public void Move(InputAction.CallbackContext context)
     {
         Vector2 dir = context.ReadValue<Vector2>();
         playerBody.velocity = dir * moveSpeed;

@@ -21,6 +21,14 @@ public class GenericEnemyController : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            gameObject.GetComponent<PlayerController>().takeDamage(enemyStats.getDamage());
+        }
+    }
+
     public void takeDamage(float amount)
     {
         bool dead = enemyStats.takeDamage(amount);
