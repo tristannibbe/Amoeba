@@ -1,5 +1,5 @@
 {
-    "name": "InputManager",
+    "name": "PlayerChar",
     "maps": [
         {
             "name": "Player",
@@ -9,6 +9,22 @@
                     "name": "Movement",
                     "type": "Button",
                     "id": "62e019dc-f32a-4b62-b3be-a4c2f7082aa7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "TogglePauseScreen",
+                    "type": "Button",
+                    "id": "84049b87-ad26-41cc-9d71-1a8267bb97df",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "1a817b6c-ec4a-42e7-878c-2ac927847e14",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -69,6 +85,28 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7f841b40-c908-44a3-89a2-0e599609c71b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "TogglePauseScreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca4f3cbb-c120-4408-be8e-2e366d6f21c5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

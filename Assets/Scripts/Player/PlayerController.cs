@@ -8,16 +8,11 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed;
+    public UIController uiController;
 
     private Rigidbody2D playerBody;
     private Collider2D playerCollider;
-
     private Animator playerAnimController;
-
-
-    private void Awake()
-    {
-    }
 
     void Start()
     {
@@ -27,15 +22,23 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void Update()
+
+    public void togglePauseScreen (InputAction.CallbackContext context){
+        uiController.togglePauseScreen(context);
+    }
+
+    public void attack(InputAction.CallbackContext context)
     {
-
-
+        if (!context.canceled)
+        {
+            print("attacked");
+            playerAnimController.SetTrigger("attack");
+        }
     }
 
 
 
-    public void Move(InputAction.CallbackContext context)
+        public void Move(InputAction.CallbackContext context)
     {
         Vector2 dir = context.ReadValue<Vector2>();
         playerBody.velocity = dir * moveSpeed;
