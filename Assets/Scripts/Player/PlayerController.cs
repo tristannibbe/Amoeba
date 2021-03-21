@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
 
     public float moveSpeed;
     public UIController uiController;
+    public float health;
+    public float damage;
 
+    private StatsSystem playerStats;
     private Rigidbody2D playerBody;
     private Collider2D playerCollider;
     private Animator playerAnimController;
@@ -19,7 +22,7 @@ public class PlayerController : MonoBehaviour
         playerBody = GetComponent<Rigidbody2D>();
         playerCollider = GetComponent<Collider2D>();
         playerAnimController = GetComponent<Animator>();
-
+        playerStats = new StatsSystem();
     }
 
 
