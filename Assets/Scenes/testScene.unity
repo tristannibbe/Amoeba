@@ -4478,28 +4478,21 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c703f32e38c4b4c488169e06a948fb1a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
-    m_Data: {fileID: 3446271213564925057, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: 3446271213564925057, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 14
-    m_Data: {fileID: 1657453660312990487, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: 1657453660312990487, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -44077866457191783, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 24
-    m_Data: {fileID: -8791801226324726205, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: -8791801226324726205, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -128129329275346364, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: -128129329275346364, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 14
-    m_Data: {fileID: -2282361902557210076, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: -2282361902557210076, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: 7285132348411586703, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: 7285132348411586703, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 24
-    m_Data: {fileID: 5563422436771240150, guid: e11e8a36e7b44b94c87ce23c4175e8da,
-      type: 3}
+    m_Data: {fileID: 5563422436771240150, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   - m_RefCount: 336
     m_Data: {fileID: 110923577627176307, guid: e11e8a36e7b44b94c87ce23c4175e8da, type: 3}
   m_TileMatrixArray:
@@ -4785,8 +4778,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1986375405875123066, guid: 2ae767626ee662842bc58064a90df237,
-    type: 3}
+  m_Sprite: {fileID: -1986375405875123066, guid: 2ae767626ee662842bc58064a90df237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4830,10 +4822,10 @@ RectTransform:
   m_Father: {fileID: 1475141869}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -408, y: -218}
-  m_SizeDelta: {x: 144.744, y: 25.1474}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 89, y: 29}
+  m_SizeDelta: {x: 144.74402, y: 25.1474}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669161973
 MonoBehaviour:
@@ -4903,7 +4895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &872510315
 Transform:
   m_ObjectHideFlags: 0
@@ -5034,8 +5026,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8696756059735770788, guid: 2ae767626ee662842bc58064a90df237,
-    type: 3}
+  m_Sprite: {fileID: -8696756059735770788, guid: 2ae767626ee662842bc58064a90df237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5291,8 +5282,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1830597005}
   - component: {fileID: 1830597004}
-  - component: {fileID: 1830597003}
   - component: {fileID: 1830597006}
+  - component: {fileID: 1830597003}
   m_Layer: 0
   m_Name: Generic Enemy
   m_TagString: Enemy
@@ -5300,8 +5291,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1830597003
-BoxCollider2D:
+--- !u!60 &1830597003
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5317,15 +5308,25 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.671875, y: 0.828125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.41654265, y: 0.36690414}
+      - {x: -0.30011702, y: 0.34546852}
+      - {x: -0.65091777, y: 0.22323215}
+      - {x: -0.7802048, y: 0.10985339}
+      - {x: -0.7802048, y: -0.1622557}
+      - {x: -0.71494126, y: -0.2615329}
+      - {x: -0.45236325, y: -0.35404283}
+      - {x: 0.55564415, y: -0.36261702}
+      - {x: 0.784492, y: -0.12671858}
+      - {x: 0.7673435, y: 0.08012688}
+      - {x: 0.70179665, y: 0.17664051}
 --- !u!212 &1830597004
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5366,8 +5367,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
-    type: 3}
+  m_Sprite: {fileID: 2123199853569368278, guid: 4968ad54cb9b83d41b8a15d76c7499fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5438,28 +5438,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
-    type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
 --- !u!114 &1910106165
@@ -5590,8 +5579,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7509759252434131616, guid: ed839a24dc8b7cf4884e1541f3ef50c5,
-    type: 3}
+  m_Sprite: {fileID: 7509759252434131616, guid: ed839a24dc8b7cf4884e1541f3ef50c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5664,8 +5652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2dbe71127908a0b45be15949959d4fd0,
-    type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 2dbe71127908a0b45be15949959d4fd0, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
