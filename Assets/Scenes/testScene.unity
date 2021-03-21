@@ -5406,6 +5406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   health: 10
+  player: {fileID: 1950739342}
+  moveSpeed: 0.1
 --- !u!1 &1910106163
 GameObject:
   m_ObjectHideFlags: 0

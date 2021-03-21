@@ -6,6 +6,8 @@ public class GenericEnemyController : MonoBehaviour
 {
     public float damage;
     public float health;
+    public GameObject player;
+    public float moveSpeed;
 
     private StatsSystem enemyStats;
 
@@ -19,6 +21,14 @@ public class GenericEnemyController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        if (player)
+        {
+            transform.position = Vector2.MoveTowards(transform.position,player.transform.position,moveSpeed);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
