@@ -21,6 +21,7 @@ public class PlayerWeaponController : MonoBehaviour
         {
             float totalDamage = player.playerStats.getDamage() + Damage;
             collision.gameObject.GetComponent<GenericEnemyController>().takeDamage(totalDamage);
+            print("attacked for " + totalDamage);
         }
     }
 }

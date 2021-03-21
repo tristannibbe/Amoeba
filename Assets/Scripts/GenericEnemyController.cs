@@ -23,7 +23,9 @@ public class GenericEnemyController : MonoBehaviour
 
     public void takeDamage(float amount)
     {
-        bool dead = enemyStats.setHealth(amount);
+        bool dead = enemyStats.takeDamage(amount);
+        print("damaged for " + amount);
+
 
         if (dead)
         {

@@ -40,9 +40,22 @@ public class StatsSystem
         this.maxHealth = maxHealth;
     }
 
-    public bool setHealth(float health)
+    public bool takeDamage(float amount)
     {
         bool dead = false;
+        this.currHealth -= amount;
+
+        if (currHealth <= 0)
+        {
+            dead = true;
+        }
+
+        return dead;
+
+    }
+
+    public void setHealth(float health)
+    {
         this.currHealth = health;
         
         if(currHealth > maxHealth)
@@ -50,12 +63,7 @@ public class StatsSystem
             currHealth = maxHealth;
         }
 
-        if(currHealth <= 0)
-        {
-            dead = true;
-        }
 
-        return dead;
     }
 
 }

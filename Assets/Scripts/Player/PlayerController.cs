@@ -30,13 +30,6 @@ public class PlayerController : MonoBehaviour
         uiController.togglePauseScreen(context);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.SendMessage("ApplyDamage", 10);
-        }
-    }
 
     public void attack(InputAction.CallbackContext context)
     {
