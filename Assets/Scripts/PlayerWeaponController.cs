@@ -17,10 +17,13 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+
+        GenericEnemyController enemy = collision.gameObject.GetComponent<GenericEnemyController>();
+        print("hit something");
+        if (enemy)
         {
             float totalDamage = player.playerStats.getDamage() + Damage;
-            collision.gameObject.GetComponent<GenericEnemyController>().takeDamage(totalDamage);
+            enemy.takeDamage(totalDamage);
             print("attacked for " + totalDamage);
         }
     }

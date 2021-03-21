@@ -23,9 +23,12 @@ public class GenericEnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        PlayerController player = collision.GetComponent<PlayerController>();
+
+
+        if (player)
         {
-            collision.gameObject.GetComponent<PlayerController>().takeDamage(enemyStats.getDamage());
+            player.takeDamage(enemyStats.getDamage());
         }
     }
 
